@@ -1,0 +1,21 @@
+;;; user-env.el -*- lexical-binding: t; -*-
+
+;; Some functionality uses this to identify you, e.g. GPG configuration, email
+;; clients, file templates and snippets. It is optional.
+(setq user-full-name "<USERNAME>"
+      user-mail-address "<EMAIL>"
+
+      user-personal-data-folder (concat (getenv "HOME") "/<DATAFOLDER>")
+      user-personal-documents-folder (concat user-personal-data-folder "/<DOCUMENTSFOLDER>")
+
+      user-org-base-path (concat (getenv "HOME") "/org")
+      user-roam-base-path (concat (getenv "HOME") "/roam")
+      user-roam-daily-path (concat user-roam-base-path "/daily")
+
+      user-base-projects-path (concat (getenv "HOME") "/source")
+
+      user-personal-zettelkasten-folder (file-truename user-roam-base-path)
+
+      user-theme 'doom-one)
+
+;;; user-env.el ends here

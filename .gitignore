@@ -1,0 +1,19 @@
+# Ignore everything
+*
+
+# ... except all folders
+!*/
+
+!/patmacs/**/*
+
+/patmacs/user-env.el
+/patmacs/user-prodigy.el
+
+!/.gitignore
+!/init.el
+!/early-init.el
+!/load-functions.el
+!/README.md
+!/KEYBINDINGS.md
+!/LICENSE
+!/bin/**/*
