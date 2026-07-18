@@ -94,4 +94,8 @@
 ;; Better throughput for language servers / async processes
 (setq read-process-output-max (* 1024 1024))
 
+;; no recentering jump
+(setq scroll-conservatively 101)
+(setq scroll-margin 4)
+
 ;;; defaults.el ends here
