@@ -105,4 +105,9 @@
 (use-package markdown-mode
   :defer t)
 
+(use-package go-mode
+  :defer t)
+
+(patmacs/load-if-exists "user-packages.el")
+
 ;;; packages.el ends here
