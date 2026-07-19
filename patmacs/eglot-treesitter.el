@@ -3,14 +3,9 @@
 (use-package treesit-auto
   :custom (treesit-auto-install 'prompt)
   :config
-  ;; Register ts-modes in auto-mode-alist once at startup.
-  ;; NOTE: deliberately NOT calling `global-treesit-auto-mode' -- it
-  ;; re-probes every known language's grammar availability on *every*
-  ;; single file visit (even non-programming files like org notes), via
-  ;; advice on `set-auto-mode-0'. On macOS each grammar-library probe
-  ;; pays Gatekeeper/codesign overhead, which made org-roam's ~1366-file
-  ;; db sync take seconds *per file* instead of milliseconds.
-  (treesit-auto-add-to-auto-mode-alist 'all))
+  (setq treesit-language-source-alist
+        (treesit-auto--build-treesit-source-alist))
+  (treesit-auto-add-to-auto-mode-alist))
 
 (use-package kotlin-ts-mode
   :mode "\\.kts?\\'")
