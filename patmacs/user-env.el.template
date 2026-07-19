@@ -16,6 +16,9 @@
 
       user-personal-zettelkasten-folder (file-truename user-roam-base-path)
 
-      user-theme 'doom-one)
+      user-theme 'doom-one
+
+      user-font-family nil
+      user-font-size 150)
 
 ;;; user-env.el ends here

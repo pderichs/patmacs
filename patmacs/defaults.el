@@ -4,8 +4,13 @@
               tab-width 2
               fill-column 100)
 
-;; Font size
-(set-face-attribute 'default nil :height 150)
+;; Font
+(apply #'set-face-attribute 'default nil
+       :height (if (and (boundp 'user-font-size) user-font-size)
+                   user-font-size
+                 150)
+       (when (and (boundp 'user-font-family) user-font-family)
+         (list :family user-font-family)))
 
 (setq make-backup-files nil
       auto-save-default nil
