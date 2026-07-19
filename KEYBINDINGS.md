@@ -70,6 +70,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | Org / Notes | `SPC nrc` | `org-roam-capture` | Capture a new org-roam note |
 | Org / Notes | `SPC nrl` | `org-roam-buffer-toggle` | Toggle the org-roam backlinks buffer |
 | Org / Notes | `SPC na` | `org-agenda` | Open the Org agenda |
+| Org / Notes | `SPC nrt` | `org-roam-add-tag` | Add a tag to a roam note |
 | Additional | `SPC hh` | `mark-whole-buffer` | Select the entire buffer |
 | Additional | `SPC ht` | `consult-theme` | Switch the color theme |
 | Describe | `SPC df` | `describe-function` | Show documentation for a function |
