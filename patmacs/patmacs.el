@@ -27,4 +27,6 @@
   (message "Loading mac specific options...")
   (patmacs/load-if-exists "mac.el"))
 
+(patmacs/load-if-exists "user-after-init.el")
+
 ;;; patmacs.el ends here

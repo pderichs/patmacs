@@ -30,9 +30,25 @@ cp patmacs/user-env.el.template patmacs/user-env.el
 emacs patmacs/user-env.el
 ```
 
-### Optional: Add user-packages.el, user-prodigy.el or user-gpg.el
+### Optional: Add user specific el files
 
-These files are loaded during startup if they exist, so you can customize your own packages, prodigy or gpg setup within the loading process of patmacs.
+The following files are loaded if patmacs finds them in the `$HOME/.config/emacs/patmacs` folder.
+
+#### `user-gpg.el`
+
+Customize gpg settings for your individual setup.
+
+#### `user-packages.el`
+
+Add additional packages.
+
+#### `user-prodigy.el`
+
+Allows to add specific service configuration for prodigy.
+
+#### `user-after-init.el`
+
+Override / customize all settings in general.
 
 ## Keybindings
 
