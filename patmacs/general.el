@@ -196,6 +196,9 @@
                     (consult-ripgrep user-personal-zettelkasten-folder))
                   :which-key "search zettelkasten")
 
+    ;; Execute
+    "x"         '(shell-command             :which-key "execute")
+
     ;; eradio
     "rp"        '(eradio-play              :which-key "play")
     "rs"        '(eradio-stop              :which-key "stop")
