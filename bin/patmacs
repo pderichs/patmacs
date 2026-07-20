@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ENV_FILE="$(dirname "$SCRIPT_DIR")/patmacs/generated-path-env.el"
+
+usage() {
+  cat <<EOF
+usage: patmacs <command>
+
+commands:
+  env    Writes the current shell environment to
+         $ENV_FILE
+  help   Show this help
+EOF
+}
+
+case "${1:-}" in
+  env)
+    perl "$SCRIPT_DIR/path.pl" "$ENV_FILE"
+    ;;
+  help | -h | --help)
+    usage
+    ;;
+  "")
+    usage >&2
+    exit 1
+    ;;
+  *)
+    echo "patmacs: Unknown command '$1'" >&2
+    usage >&2
+    exit 1
+    ;;
+esac

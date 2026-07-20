@@ -20,6 +20,12 @@ mv $HOME/.config/emacs $HOME/.config/emacs.bak
 git clone <this_repo> $HOME/.config/emacs
 ```
 
+### Create environment from shell
+
+```bash
+$HOME/.config/emacs/bin/patmacs env
+```
+
 ### Create user-env.el
 
 Copy the user-env template and edit / customize the values according to your needs.
