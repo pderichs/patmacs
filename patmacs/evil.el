@@ -44,4 +44,20 @@
   :config
   (evil-snipe-override-mode 1))
 
+;; Multiple cursors: M-S-<down>/M-S-<up> add a cursor one line below/above,
+;; same column (like Sublime/VS Code's Ctrl+Alt+Down/Up)
+(use-package evil-mc
+  :after evil
+  :config
+  (global-evil-mc-mode 1)
+  (define-key evil-normal-state-map (kbd "M-S-<down>") #'evil-mc-make-cursor-move-next-line)
+  (define-key evil-normal-state-map (kbd "M-S-<up>")   #'evil-mc-make-cursor-move-prev-line)
+  (define-key evil-visual-state-map (kbd "M-S-<down>") #'evil-mc-make-cursor-move-next-line)
+  (define-key evil-visual-state-map (kbd "M-S-<up>")   #'evil-mc-make-cursor-move-prev-line)
+
+  (define-key evil-normal-state-map  [escape] #'patmacs/evil-mc-undo-cursors-and-escape)
+  (define-key evil-visual-state-map  [escape] #'patmacs/evil-mc-undo-cursors-and-escape)
+  (define-key evil-insert-state-map  [escape] #'patmacs/evil-mc-undo-cursors-and-escape)
+  (define-key evil-replace-state-map [escape] #'patmacs/evil-mc-undo-cursors-and-escape))
+
 ;;; evil.el ends here

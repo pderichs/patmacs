@@ -92,6 +92,9 @@ including Insert). All leader bindings are defined in `general.el`.
 | Quit | `SPC qr` | `restart-emacs` | Restart Emacs |
 | Multiedit | `SPC mn` | `evil-multiedit-match-and-next` | Mark the symbol at point and jump to the next match |
 | Multiedit | `SPC ma` | `evil-multiedit-match-all` | Mark all matches of the symbol at point |
+| Multiple cursors | `M-S-<down>` | `evil-mc-make-cursor-move-next-line` | Add a cursor one line below, same column |
+| Multiple cursors | `M-S-<up>` | `evil-mc-make-cursor-move-prev-line` | Add a cursor one line above, same column |
+| Multiple cursors | `<escape>` (Normal, Visual, Insert, Replace) | `patmacs/evil-mc-undo-cursors-and-escape` | Collapse all evil-mc cursors back to one, then perform the state's usual Escape action |
 | File | `SPC fp` | `patmacs/find-file-in-config` | Open a file from the Emacs config directory |
 | Jump / Symbols | `SPC ji` | `consult-imenu` | Jump to a symbol via imenu |
 | Jump / Symbols | `SPC -` | `consult-register` | Browse registers and the clipboard |

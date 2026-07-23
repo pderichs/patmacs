@@ -196,4 +196,16 @@ und schneide ihn auf maximal 90 Zeichen zu."
       (package-autoremove))
     (message "Package update finished")))
 
+;; Escape collapses all evil-mc cursors back to one, then falls
+;; through to the state's normal Escape behavior.
+(defun patmacs/evil-mc-undo-cursors-and-escape ()
+  "Undo all evil-mc cursors (if any), then perform the usual Escape action."
+  (interactive)
+  (when (evil-mc-has-cursors-p)
+    (evil-mc-undo-all-cursors))
+  (cond
+   ((evil-visual-state-p) (evil-exit-visual-state))
+   ((or (evil-insert-state-p) (evil-replace-state-p)) (evil-normal-state))
+   (t (evil-force-normal-state))))
+
 ;;; functions.el ends here
