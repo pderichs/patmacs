@@ -12,11 +12,25 @@
 
 (use-package eglot
   :ensure nil
-  :hook ((c-ts-mode       . eglot-ensure)
-         (c++-ts-mode     . eglot-ensure)
-         (java-ts-mode    . eglot-ensure)
-         (kotlin-ts-mode  . eglot-ensure)
-         (python-ts-mode  . eglot-ensure))
+  :hook ((c-ts-mode          . eglot-ensure)
+         (c++-ts-mode        . eglot-ensure)
+         (java-mode          . eglot-ensure)
+         (java-ts-mode       . eglot-ensure)
+         (kotlin-ts-mode     . eglot-ensure)
+         (python-ts-mode     . eglot-ensure)
+         (css-mode           . eglot-ensure)
+         (css-ts-mode        . eglot-ensure)
+         (yaml-mode          . eglot-ensure)
+         (yaml-ts-mode       . eglot-ensure)
+         (html-mode          . eglot-ensure)
+         (html-ts-mode       . eglot-ensure)
+         (js-mode            . eglot-ensure)
+         (js-ts-mode         . eglot-ensure)
+         (markdown-mode      . eglot-ensure)
+         (markdown-ts-mode   . eglot-ensure)
+         ;; formatting
+         (before-save . eglot-format-buffer)
+         )
   :config
   (setq eglot-autoshutdown t
         eglot-events-buffer-size 0
