@@ -132,6 +132,7 @@
                     (interactive)
                     (dired "."))
                   :which-key "dired here")
+    "oi"        '(ffap                      :which-key "open file under cursor")
 
     ;; Search in folders
     "["         '(patmacs/search-string-in-folder :which-key "search string in folder")
