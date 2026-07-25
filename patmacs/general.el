@@ -110,7 +110,7 @@
     "nrc"       '(org-roam-capture         :which-key "capture")
     "nrl"       '(org-roam-buffer-toggle   :which-key "backlinks")
     "na"        '(org-agenda               :which-key "agenda")
-    "nrt"       '(org-roam-tag-add         :which-key "roam")
+    "nrt"       '(org-roam-tag-add         :which-key "add tag")
 
     ;; Additional commands
     "h"         '(:ignore t                :which-key "additional")
