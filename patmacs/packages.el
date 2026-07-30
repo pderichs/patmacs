@@ -60,9 +60,6 @@
 (use-package elpher
   :commands elpher)
 
-(use-package nim-mode
-  :mode "\\.nim\\'")
-
 (use-package xkcd
   :commands (xkcd xkcd-get-latest))
 
@@ -103,9 +100,6 @@
   :defer t)
 
 (use-package markdown-mode
-  :defer t)
-
-(use-package go-mode
   :defer t)
 
 (patmacs/load-if-exists "user-packages.el")
