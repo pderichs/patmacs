@@ -117,6 +117,7 @@
     "hh"        '(mark-whole-buffer        :which-key "select whole buffer")
     "ht"        '(consult-theme            :which-key "switch theme")
 
+    ;; Describe
     "d"         '(:ignore t                :which-key "describe")
     "df"        '(describe-function        :which-key "function")
     "dv"        '(describe-variable        :which-key "variable")
@@ -184,6 +185,12 @@
                     (insert "Aufgabe Q")
                     (evil-insert 1))
                   :which-key "insert task heading")
+
+    ;; Copy
+    "yy"         '((lambda ()
+                    (interactive)
+                    (execute-kbd-macro (kbd "^v$y")))
+                  :which-key "select whole line without preceding whitespace")
 
     ;; Bookmarks
     "lb"        '(list-bookmarks           :which-key "edit bookmarks")
