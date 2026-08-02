@@ -13,6 +13,7 @@ including Insert). All leader bindings are defined in `general.el`.
 |---|---|---|---|
 | — | `SPC SPC` | `execute-extended-command` | Run any command by name (like `M-x`) |
 | — | `SPC /` | `consult-ripgrep` | Search the current project with ripgrep |
+| — | `SPC *` | `patmacs/search-symbol-at-point-in-project` | Search the project with ripgrep for the symbol at point |
 | — | `SPC RET` | `consult-bookmark` | Jump to a bookmark |
 | — | `SPC .` | `find-file` | Open a file |
 | — | `SPC :` | `eval-expression` | Evaluate a Lisp expression |
@@ -70,7 +71,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | Org / Notes | `SPC nrc` | `org-roam-capture` | Capture a new org-roam note |
 | Org / Notes | `SPC nrl` | `org-roam-buffer-toggle` | Toggle the org-roam backlinks buffer |
 | Org / Notes | `SPC na` | `org-agenda` | Open the Org agenda |
-| Org / Notes | `SPC nrt` | `org-roam-add-tag` | Add a tag to a roam note |
+| Org / Notes | `SPC nrt` | `org-roam-tag-add` | Add a tag to a roam note |
 | Additional | `SPC hh` | `mark-whole-buffer` | Select the entire buffer |
 | Additional | `SPC ht` | `consult-theme` | Switch the color theme |
 | Describe | `SPC df` | `describe-function` | Show documentation for a function |
@@ -80,6 +81,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | Open | `SPC of` | `ff-find-other-file` | Switch between a source file and its counterpart (e.g. header/implementation) |
 | Open | `SPC oe` | `patmacs/open-current-buffer-folder-in-file-manager` | Open the current buffer's folder in the system file manager |
 | Open | `SPC #` | `dired` | Open Dired in the current directory |
+| Open | `SPC oi` | `ffap` | Open the file (or URL) under the cursor |
 | Search in folder | `SPC [` | `patmacs/search-string-in-folder` | Search for a string within a chosen folder |
 | Search in folder | `SPC ö` | `patmacs/search-string-in-folder` | Search for a string within a chosen folder |
 | Search in folder | `SPC ]` | `patmacs/search-file-in-folder` | Search for a file within a chosen folder |
@@ -87,6 +89,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | Line selection | `SPC ,` | (inline lambda) | Select the rest of the current line |
 | Line selection | `SPC lv` | (inline lambda) | Select the whole current line |
 | Line selection | `SPC ly` | (inline lambda) | Yank (copy) the whole current line |
+| Copy | `SPC yy` | (inline lambda) | Yank (copy) the whole current line, excluding leading whitespace |
 | Neotree | `SPC nt` | `neotree-toggle` | Toggle the Neotree file browser sidebar |
 | Quit | `SPC qq` | `save-buffers-kill-terminal` | Save buffers and quit Emacs |
 | Quit | `SPC qr` | `restart-emacs` | Restart Emacs |
@@ -112,6 +115,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | eradio | `SPC rp` | `eradio-play` | Play the configured internet radio station |
 | eradio | `SPC rs` | `eradio-stop` | Stop internet radio playback |
 | eradio | `SPC rt` | `eradio-toggle` | Toggle internet radio playback |
+| Execute | `SPC x` | `shell-command` | Run a shell command |
 
 ## Global keybindings (non-leader)
 
