@@ -9,6 +9,7 @@
 /patmacs/user-env.el
 /patmacs/user-prodigy.el
 /patmacs/generated-path-env.el
+/patmacs/user-general.el
 
 !/.gitignore
 !/init.el

@@ -52,6 +52,22 @@ Add additional packages.
 
 Allows to add specific service configuration for prodigy.
 
+#### `user-general.el`
+
+You can configure additional leader key bindings here by modifying the default keymap.
+
+Example:
+
+```lisp
+(my/leader
+  "ia"        '((lambda ()
+                  (interactive)
+                  (org-insert-heading)
+                  (insert "Hello, world!")
+                  (evil-insert 1))
+                :which-key "insert hello world"))
+```
+
 #### `user-after-init.el`
 
 Override / customize all settings in general.

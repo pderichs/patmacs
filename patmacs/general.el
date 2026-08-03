@@ -5,13 +5,13 @@
   :after evil
   :config
   (general-evil-setup)
-  (general-create-definer my/leader
+  (general-create-definer patmacs/leader
     :states '(normal visual motion emacs)
     :keymaps 'override
     :prefix "SPC"
     :global-prefix "M-SPC")
 
-  (my/leader
+  (patmacs/leader
     "SPC"       '(execute-extended-command :which-key "M-x")
     "/"         '(consult-ripgrep          :which-key "search project (rg)")
     "*"         '(patmacs/search-symbol-at-point-in-project :which-key "search symbol in project")
@@ -179,12 +179,6 @@
     ;; Insertion
     "id"        '(patmacs/insert-date      :which-key "insert date")
     "il"        '(patmacs/insert-line      :which-key "insert line")
-    "ia"        '((lambda ()
-                    (interactive)
-                    (org-insert-heading)
-                    (insert "Aufgabe Q")
-                    (evil-insert 1))
-                  :which-key "insert task heading")
 
     ;; Copy
     "yy"         '((lambda ()

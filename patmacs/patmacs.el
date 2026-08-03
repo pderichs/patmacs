@@ -6,6 +6,7 @@
 (patmacs/load-required "gc.el")
 (patmacs/load-required "evil.el")
 (patmacs/load-required "general.el")
+(patmacs/load-if-exists "user-general.el")
 (patmacs/load-required "completion.el")
 (patmacs/load-required "eglot-treesitter.el")
 (patmacs/load-required "org.el")
