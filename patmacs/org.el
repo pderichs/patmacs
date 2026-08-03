@@ -73,7 +73,7 @@
 
 ;; org-mode: S-<up> jumps to parent element
 (with-eval-after-load 'org
-  (setq org-return-follows-link t)
+  (setq org-return-follows-link nil)
   (define-key org-mode-map (kbd "S-<up>") #'outline-up-heading)
   (evil-define-key 'normal org-mode-map (kbd "RET") #'patmacs/org-ret-dwim))
 
