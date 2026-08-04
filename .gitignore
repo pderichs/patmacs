@@ -8,8 +8,9 @@
 
 /patmacs/user-env.el
 /patmacs/user-prodigy.el
-/patmacs/generated-path-env.el
 /patmacs/user-general.el
+/patmacs/user-packages.el
+/patmacs/generated-path-env.el
 
 !/.gitignore
 !/init.el
