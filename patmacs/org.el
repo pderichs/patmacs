@@ -13,6 +13,7 @@
         org-src-fontify-natively t
         org-src-tab-acts-natively t
         org-edit-src-content-indentation 0
+        org-use-sub-superscripts '{}
         org-agenda-files (list org-directory user-roam-daily-path))
   (org-babel-do-load-languages
    'org-babel-load-languages
