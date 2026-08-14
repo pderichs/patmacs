@@ -148,11 +148,11 @@
                   :which-key "select rest of line")
     "lv"        '((lambda ()
                     (interactive)
-                    (execute-kbd-macro (kbd "^v$h")))
+                    (execute-kbd-macro (kbd "_v$h")))
                   :which-key "select whole line")
     "ly"        '((lambda ()
                     (interactive)
-                    (execute-kbd-macro (kbd "^v$hy")))
+                    (execute-kbd-macro (kbd "_v$hy")))
                   :which-key "yank whole line")
 
     ;; Neotree
@@ -183,7 +183,7 @@
     ;; Copy
     "yy"         '((lambda ()
                     (interactive)
-                    (execute-kbd-macro (kbd "^v$y")))
+                    (execute-kbd-macro (kbd "_v$y")))
                   :which-key "select whole line without preceding whitespace")
 
     ;; Bookmarks
