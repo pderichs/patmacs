@@ -36,6 +36,13 @@
         (setq default-directory file-name-dir))
     (start-process terminal nil terminal)))
 
+(defun patmacs/copy-buffer-file-name ()
+  "Copies the current buffer's file name to the clipboard."
+  (interactive)
+  (let ((file-name (or buffer-file-name (buffer-name))))
+    (kill-new file-name)
+    (message "Copied file name: %s" file-name)))
+
 (defun patmacs/search-string-in-folder ()
   "Searches for a string in a specific folder."
   (interactive)

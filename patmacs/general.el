@@ -35,6 +35,7 @@
     "fr"        '(consult-recent-file      :which-key "recent")
     "fs"        '(save-buffer              :which-key "save")
     "fR"        '(rename-visited-file      :which-key "rename")
+    "fy"        '(patmacs/copy-buffer-file-name :which-key "copy file name")
 
     ;; Buffers
     "b"         '(:ignore t                :which-key "buffer")

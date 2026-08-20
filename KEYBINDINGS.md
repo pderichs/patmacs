@@ -21,6 +21,7 @@ including Insert). All leader bindings are defined in `general.el`.
 | File | `SPC fr` | `consult-recent-file` | Open a recently used file |
 | File | `SPC fs` | `save-buffer` | Save the current buffer |
 | File | `SPC fR` | `rename-visited-file` | Rename the file visited by the current buffer |
+| File | `SPC fy` | `patmacs/copy-buffer-file-name` | Copy the current buffer's file name to the clipboard |
 | Buffer | `SPC bb` | `consult-buffer` | Switch to another buffer |
 | Buffer | `SPC bk` | `kill-current-buffer` | Kill the current buffer |
 | Buffer | `SPC br` | `revert-buffer` | Reload the buffer's contents from disk |
