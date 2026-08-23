@@ -5,7 +5,7 @@
         evil-want-keybinding nil ; required for evil-collection
         evil-want-C-u-scroll t
         evil-want-C-i-jump nil
-        evil-respect-visual-line-mode t
+        evil-respect-visual-line-mode nil
         evil-undo-system 'undo-redo ; integrated undo-redo (Emacs 28+)
         evil-search-module 'evil-search
         evil-split-window-below t
