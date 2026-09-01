@@ -201,7 +201,10 @@ und schneide ihn auf maximal 90 Zeichen zu."
     (package-upgrade-all nil)
     (when (yes-or-no-p "Remove obsolete packages now? ")
       (package-autoremove))
-    (message "Package update finished")))
+    (message "Package update finished")
+    (when (yes-or-no-p "Restart Emacs now? ")
+      (let ((confirm-kill-emacs nil))
+        (restart-emacs)))))
 
 ;; Escape collapses all evil-mc cursors back to one, then falls
 ;; through to the state's normal Escape behavior.
