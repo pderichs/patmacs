@@ -218,4 +218,15 @@ und schneide ihn auf maximal 90 Zeichen zu."
    ((or (evil-insert-state-p) (evil-replace-state-p)) (evil-normal-state))
    (t (evil-force-normal-state))))
 
+;; Inserts a gpg encryption header at the top of the current buffer.
+(defun patmacs/insert-gpg-encryption-header ()
+  (interactive)
+  (save-excursion
+    (widen)
+    (goto-char (point-min))
+    (insert (concat ";; -*- epa-file-encrypt-to: (\""
+                    user-mail-address
+                    "\") -*-"))
+    (newline)))
+
 ;;; functions.el ends here
